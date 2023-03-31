@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Block Note</title>
+</head>
+
+
+
+<body>
+    <header>
+        <h1>Block Note</h1>
+
+        <div class="zone-input-title">
+            <input id="title-input" placeholder="Titre..." type="text" maxlength="15" />
+        </div>
+
+        <!-- remettre le form -->
+        <div class="zone-input-text">
+            <input id="text-input" placeholder="Texte..." type="text" />
+        </div>
+
+        <div class="zone-button">
+            <button id="button" type="submit">→ Valider</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="zone-block" ondragstart="start(event)" ondragover="return over(event)" onDrop="return drop(event)"
+            ondragleave="leave(event)">
+            <div class="title">À faire</div>
+        </section>
+
+        <section class="section-drop" ondragstart="start(event)" ondragover="return over(event)"
+            onDrop="return drop(event)" ondragleave="leave(event)">
+            <div class="title">Mémo</div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
